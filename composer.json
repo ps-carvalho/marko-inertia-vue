@@ -3,27 +3,11 @@
   "type": "marko-module",
   "description": "Vue 3 companion for marko/inertia — scaffolding and SSR server entry point",
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../marko-inertia",
-      "options": {
-        "symlink": true
-      }
-    },
-    {
-      "type": "path",
-      "url": "../marko-vite",
-      "options": {
-        "symlink": true
-      }
-    }
-  ],
   "require": {
     "php": "^8.5",
-    "marko/core": "^0.1.0",
-    "marko/inertia": "^0.1.0@dev",
-    "marko/vite": "^0.1.0@dev"
+    "marko/core": "self.version",
+    "marko/inertia": "self.version",
+    "marko/vite": "self.version"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.92",
@@ -46,9 +30,6 @@
     }
   },
   "extra": {
-    "branch-alias": {
-      "dev-main": "0.1.x-dev"
-    },
     "marko": {
       "module": true
     }

@@ -8,7 +8,7 @@ $basePath = is_string($documentRoot) && $documentRoot !== ''
     : (getcwd() ?: '');
 
 return [
-    // Vue-specific Inertia defaults.
-    // The SSR bundle path for Vue apps.
-    'ssrBundle' => env('INERTIA_VUE_SSR_BUNDLE', $basePath.'/bootstrap/ssr/ssr.js'),
+    'clientEntry' => env('INERTIA_VUE_CLIENT_ENTRY', 'app/vue-web/resources/js/app.js'),
+    'ssrEntry' => env('INERTIA_VUE_SSR_ENTRY', 'app/vue-web/resources/js/ssr.js'),
+    'ssrBundle' => env('INERTIA_VUE_SSR_BUNDLE', $basePath.'/bootstrap/ssr/vue/ssr.js'),
 ];
